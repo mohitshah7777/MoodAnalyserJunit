@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class MoodAnalyserTest {
 
-    //TC 1.1
+    //Repeat TC 1.1
     @Test
     public void givenMessage_WhenSad_ShouldReturnSad()
     {
@@ -14,11 +14,11 @@ public class MoodAnalyserTest {
         Assert.assertEquals("SAD",mood);
     }
 
-    //TC 1.2
+    //Repeat TC 1.2
     @Test
     public void givenMessage_WhenNotSad_ShouldReturnHappy()
     {
-        MoodAnalyser moodAnalyser=new MoodAnalyser("I am in any mood");
+        MoodAnalyser moodAnalyser=new MoodAnalyser("I am in HAPPY mood");
         String mood=moodAnalyser.analyseMood();
         Assert.assertEquals("HAPPY",mood);
     }

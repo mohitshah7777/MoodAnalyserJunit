@@ -4,12 +4,20 @@ public class MoodAnalyser {
 
     public String message;
 
-    public String analyseMood() {
+    //Refractored the code to take the mood message in the constructor
+    public MoodAnalyser() {
         this.message=message;
+    }
+
+    public MoodAnalyser(String message) {
+        this.message=message;
+    }
+
+    public String analyseMood(String message) {
         return analyseMood();
     }
 
-    public String analyseMood(String message)
+    public String analyseMood()
     {
         if (message.contains("SAD"))
             return "SAD";

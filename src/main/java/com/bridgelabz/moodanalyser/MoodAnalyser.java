@@ -17,7 +17,7 @@ public class MoodAnalyser {
         return analyseMood();
     }
 
-    //UC2
+    //UC2 -- TC 2.1
     public String analyseMood() throws MoodAnalysisException {
         try {
             if (message.contains("SAD"))
@@ -25,7 +25,8 @@ public class MoodAnalyser {
             else
                 return "HAPPY";
         } catch(NullPointerException e){
-            throw new MoodAnalysisException("Please Enter correct message");
+            System.out.println("CATCH BLOCK HANDLED");
         }
+        return "HAPPY";
     }
 }

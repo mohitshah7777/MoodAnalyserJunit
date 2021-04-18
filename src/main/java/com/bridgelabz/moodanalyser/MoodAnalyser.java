@@ -20,12 +20,14 @@ public class MoodAnalyser {
     //UC2 -- TC 2.1
     public String analyseMood() throws MoodAnalysisException {
         try {
+            if(message.length()==0)
+                throw new MoodAnalysisException(MoodAnalysisException.errorType.EMPTY,"Empty mood");        //UC3 -- TC 3.2
             if (message.contains("SAD"))
                 return "SAD";
             else
                 return "HAPPY";
         } catch(NullPointerException e){
-            throw new MoodAnalysisException(MoodAnalysisException.errorType.NULL,"Null Mood");
+            throw new MoodAnalysisException(MoodAnalysisException.errorType.NULL,"Null Mood");              //UC3 -- TC 3.1
         }
     }
 }

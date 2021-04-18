@@ -25,8 +25,7 @@ public class MoodAnalyser {
             else
                 return "HAPPY";
         } catch(NullPointerException e){
-            System.out.println("CATCH BLOCK HANDLED");
+            throw new MoodAnalysisException(MoodAnalysisException.errorType.NULL,"Null Mood");
         }
-        return "HAPPY";
     }
 }

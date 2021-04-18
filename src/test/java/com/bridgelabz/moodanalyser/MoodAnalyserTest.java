@@ -30,4 +30,15 @@ public class MoodAnalyserTest {
             Assert.assertEquals("HAPPY",e.getMessage());
         }
     }
+
+    //UC3 -- TC 3.1
+    @Test
+    public void givenNULLMood_ShouldThrowMoodAnalysisException(){
+        MoodAnalyser moodAnalyser=new MoodAnalyser(null);
+        try{
+            moodAnalyser.analyseMood();
+        }catch (MoodAnalysisException e){
+            Assert.assertEquals("Null Mood",e.getMessage());
+        }
+    }
 }

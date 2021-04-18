@@ -5,11 +5,11 @@ public class MoodAnalysisException extends Exception {
 
     //UC3 Inform user if entered Invalid Mood
     public enum errorType {
-        NULL,EMPTY;
+        NULL,EMPTY
     }
     public errorType type;
 
-    public MoodAnalysisException(String message)
+    public MoodAnalysisException(errorType type,String message)
     {
         super(message);
         this.type=type;
